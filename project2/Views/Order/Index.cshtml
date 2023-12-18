@@ -1,0 +1,21 @@
+﻿@model List<Order>
+
+
+@foreach (var order in Model)
+{
+    <div>
+        <p>Order ID: @order.OrderId</p>
+@*         <p>SenderCity: @order.SenderCity</p>
+        <p>SenderAddress: @order.SenderAddress</p>
+        <p>ReceiverCity: @order.ReceiverCity</p>
+        <p>ReceiverAddress: @order.ReceiverAddress</p>
+        <p>Weight: @order.Weight</p>
+        <p>PickupDate: @order.PickupDate</p> *@
+        <!-- Остальные поля заказа -->        
+    </div>
+    <div>
+        <a asp-action="Create">Добавить</a> |
+        <a asp-action="Details">Детали</a>
+        <a asp-action="Delete">Удалить</a>
+    </div>
+}
