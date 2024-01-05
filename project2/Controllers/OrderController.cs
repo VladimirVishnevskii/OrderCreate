@@ -6,7 +6,7 @@ namespace project2.Controllers
 {
     public class OrderController : Controller
     {
-        readonly OrderDbContext db;
+        private readonly OrderDbContext db;
 
         public OrderController()
         {
@@ -18,10 +18,6 @@ namespace project2.Controllers
             var order = db.Orders.ToList().OrderBy(o => o.OrderId); 
             
             return View(order);
-        }
-        public ActionResult Index()
-        {
-            return View();
         }
 
         public ActionResult Create()
@@ -70,25 +66,6 @@ namespace project2.Controllers
             return Redirect("IndexNew");
 
         }
-
-        //public ActionResult Edit()
-        //{
-        //    return View();
-        //}
-
-        //[HttpPost]
-        //public ActionResult Edit(int id)
-        //{
-        //    var orderid = db.Orders.Find(id);
-
-        //    if (orderid != null)
-        //    {
-        //        db.Orders.Update(orderid);
-        //        db.SaveChanges();
-        //        return RedirectToAction("IndexNew");
-        //    }
-        //    return View();
-        //}
         public ActionResult Edit(int id)
         {
             if (id != null)

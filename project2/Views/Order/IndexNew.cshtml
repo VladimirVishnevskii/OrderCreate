@@ -4,7 +4,7 @@
     ViewData["Title"] = "IndexNew";
 }
 
-<h1>IndexNew</h1>
+<h1>Страница создания заказов</h1>
 
 <p>
     <a asp-action="Create">Создать заказ</a>
@@ -15,27 +15,10 @@
             <th>
                 @Html.DisplayNameFor(model => model.OrderId)
             </th>
-            <th>
+            <th>                
                 @Html.DisplayNameFor(model => model.OrderNumber)
             </th>
-@*             <th>
-                @Html.DisplayNameFor(model => model.SenderCity)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SenderAddress)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ReceiverCity)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ReceiverAddress)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Weight)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PickupDate)
-            </th> *@
+
             <th></th>
         </tr>
     </thead>
@@ -48,24 +31,7 @@
                 <th>
                     @Html.DisplayFor(modelItem => item.OrderNumber)
                 </th>
-@*             <td>
-                @Html.DisplayFor(modelItem => item.SenderCity)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SenderAddress)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ReceiverCity)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ReceiverAddress)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Weight)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PickupDate)
-            </td> *@
+
             <td>
                 <a asp-action="Edit" asp-route-id="@item.OrderId">Изменить</a> |
                 <a asp-action="Details" asp-route-id="@item.OrderId">Подробнее</a> |
